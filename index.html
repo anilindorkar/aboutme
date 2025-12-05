@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anil Indorkar - Engineering Manager | Cloud Solutions | 17+ years experience"
+    />
+    <title>Anil Indorkar - Engineering Manager & Technical Leader</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #0f3460;
+        --secondary: #533483;
+        --accent: #16a34a;
+        --light-bg: #f8f9fa;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --border: #e0e0e0;
+        --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        --card-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%);
+      }
+
+      /* ============ HEADER ============ */
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--secondary) 100%
+        );
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>')
+          no-repeat bottom;
+        background-size: cover;
+      }
+
+      header > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      header h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.5px;
+      }
+
+      header .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+      }
+
+      .header-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 0.6rem 1.5rem;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-weight: 600;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        font-size: 1rem;
+      }
+
+      .contact-info a,
+      .contact-info span {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: opacity 0.3s;
+      }
+
+      .contact-info a:hover {
+        opacity: 0.8;
+      }
+
+      .contact-info i {
+        font-size: 1.2rem;
+      }
+
+      /* ============ NAVIGATION ============ */
+      nav {
+        background: white;
+        padding: 1.2rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      nav a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav a:hover {
+        color: var(--secondary);
+      }
+
+      nav i {
+        font-size: 1.1rem;
+      }
+
+      /* ============ CONTAINER & SECTIONS ============ */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      section {
+        background: white;
+        margin: 2.5rem auto;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: var(--card-shadow);
+        border-top: 4px solid var(--primary);
+        transition: box-shadow 0.3s ease;
+      }
+
+      section:hover {
+        box-shadow: var(--card-hover);
+      }
+
+      section h2 {
+        color: var(--primary);
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      section h2 i {
+        font-size: 2rem;
+      }
+
+      section h3 {
+        color: var(--secondary);
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      /* ============ ABOUT SECTION ============ */
+      .summary-box {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 52, 96, 0.05) 0%,
+          rgba(83, 52, 131, 0.05) 100%
+        );
+        padding: 2rem;
+        border-radius: 10px;
+        border-left: 5px solid var(--primary);
+        margin-bottom: 2rem;
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .summary-box p {
+        margin-bottom: 1rem;
+      }
+
+      .strengths-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .strength-badge {
+        background: white;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .strength-badge:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .strength-badge i {
+        font-size: 1.3rem;
+      }
+
+      /* ============ EXPERIENCE SECTION ============ */
+      .experience-timeline {
+        position: relative;
+        padding: 0;
+      }
+
+      .experience-item {
+        margin-bottom: 2.5rem;
+        padding: 1.8rem;
+        background: var(--light-bg);
+        border-radius: 10px;
+        border-left: 4px solid var(--accent);
+        transition: all 0.3s ease;
+        position: relative;
+        padding-left: 2.5rem;
+      }
+
+      .experience-item:hover {
+        background: white;
+        box-shadow: var(--card-shadow);
+        transform: translateX(5px);
+      }
+
+      .experience-item::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 25px;
+        width: 20px;
+        height: 20px;
+        background: var(--accent);
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 0 0 3px var(--accent);
+      }
+
+      .job-title {
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 1.25rem;
+        margin-bottom: 0.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .job-title i {
+        color: var(--secondary);
+      }
+
+      .company {
+        color: var(--secondary);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.05rem;
+      }
+
+      .company i {
+        color: var(--accent);
+      }
+
+      .duration {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .duration i {
+        color: var(--accent);
+      }
+
+      .experience-item ul {
+        margin: 1rem 0 0 1.5rem;
+        list-style: none;
+      }
+
+      .experience-item li {
+        margin-bottom: 0.7rem;
+        color: var(--text-dark);
+        line-height: 1.7;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .experience-item li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: bold;
+      }
+
+      .metric-badge {
+        display: inline-block;
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-right: 0.5rem;
+        margin-top: 0.3rem;
+      }
+
+      /* ============ SKILLS SECTION ============ */
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .skill-category {
+        background: var(--light-bg);
+        padding: 1.8rem;
+        border-radius: 10px;
+        border-left: 4px solid var(--primary);
+        transition: all 0.3s ease;
+      }
+
+      .skill-category:hover {
+        box-shadow: var(--card-shadow);
+        transform: translateY(-3px);
+      }
+
+      .skill-category h4 {
+        color: var(--primary);
+        margin-bottom: 1.2rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-category i {
+        font-size: 1.3rem;
+        color: var(--secondary);
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .skill-tag {
+        background: white;
+        color: var(--primary);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1.5px solid var(--primary);
+        transition: all 0.3s ease;
+      }
+
+      .skill-tag:hover {
+        background: var(--primary);
+        color: white;
+        transform: scale(1.05);
+      }
+
+      /* ============ PROJECTS SECTION ============ */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        border-top: 4px solid var(--accent);
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card:hover {
+        box-shadow: var(--card-hover);
+        transform: translateY(-8px);
+      }
+
+      .project-header {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 52, 96, 0.1),
+          rgba(83, 52, 131, 0.1)
+        );
+        padding: 1.5rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .project-header h4 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .project-header h4 i {
+        color: var(--secondary);
+      }
+
+      .project-body {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-body p {
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        line-height: 1.7;
+        flex: 1;
+      }
+
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .tech-tag {
+        background: #e3f2fd;
+        color: #1976d2;
+        padding: 0.3rem 0.7rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* ============ CERTIFICATIONS ============ */
+      .certification-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .cert-item {
+        background: var(--light-bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent);
+        transition: all 0.3s ease;
+      }
+
+      .cert-item:hover {
+        background: white;
+        box-shadow: var(--card-shadow);
+        transform: translateX(5px);
+      }
+
+      .cert-item strong {
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+      }
+
+      .cert-item strong i {
+        color: var(--accent);
+        font-size: 1.3rem;
+      }
+
+      .cert-item p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* ============ EDUCATION ============ */
+      .education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .education-item {
+        background: var(--light-bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary);
+        transition: all 0.3s ease;
+      }
+
+      .education-item:hover {
+        background: white;
+        box-shadow: var(--card-shadow);
+        transform: translateX(5px);
+      }
+
+      .degree {
+        color: var(--primary);
+        font-weight: 800;
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .degree i {
+        color: var(--secondary);
+        font-size: 1.3rem;
+      }
+
+      .institution {
+        color: var(--secondary);
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+
+      .year {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* ============ LANGUAGES ============ */
+      .languages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .language-item {
+        background: var(--light-bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .language-item:hover {
+        background: white;
+        box-shadow: var(--card-shadow);
+        transform: translateY(-3px);
+      }
+
+      .language-item strong {
+        color: var(--primary);
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .language-item i {
+        color: var(--secondary);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .proficiency {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      /* ============ FOOTER ============ */
+      footer {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--secondary) 100%
+        );
+        color: white;
+        text-align: center;
+        padding: 2.5rem;
+        margin-top: 4rem;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .social-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .social-links a:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-3px);
+      }
+
+      .social-links i {
+        font-size: 1.2rem;
+      }
+
+      footer p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      /* ============ RESPONSIVE ============ */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        header .title {
+          font-size: 1.1rem;
+        }
+
+        nav ul {
+          gap: 1rem;
+          padding: 0 15px;
+        }
+
+        section {
+          margin: 1.5rem auto;
+          padding: 1.5rem;
+        }
+
+        .contact-info {
+          gap: 1.2rem;
+          font-size: 0.9rem;
+        }
+
+        .skills-container,
+        .education-grid,
+        .languages-grid,
+        .certification-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        nav a {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        nav ul {
+          gap: 0.8rem;
+        }
+
+        .contact-info {
+          gap: 0.8rem;
+        }
+
+        section h2 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><i class="fas fa-code"></i> Anil Indorkar</h1>
+      <p class="title">
+        <i class="fas fa-briefcase"></i> Engineering Manager | Cloud Solutions |
+        Agile Leader
+      </p>
+      <div class="header-badge">
+        <i class="fas fa-star"></i> 17+ Years of Technical & Managerial
+        Experience
+      </div>
+      <div class="contact-info">
+        <a href="tel:+919173851679" title="Phone"
+          ><i class="fas fa-phone"></i> +91 7385167915</a
+        >
+        <a href="mailto:ajindorkar@gmail.com" title="Email"
+          ><i class="fas fa-envelope"></i> ajindorkar@gmail.com</a
+        >
+        <a
+          href="https://www.linkedin.com/in/anil-indorkar/"
+          target="_blank"
+          title="LinkedIn"
+          ><i class="fab fa-linkedin"></i> LinkedIn Profile</a
+        >
+        <span title="Location"
+          ><i class="fas fa-map-marker-alt"></i> Pune, India</span
+        >
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#about"><i class="fas fa-user"></i> About</a>
+        </li>
+        <li>
+          <a href="#experience"><i class="fas fa-chart-line"></i> Experience</a>
+        </li>
+        <li>
+          <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+        </li>
+        <li>
+          <a href="#projects"><i class="fas fa-rocket"></i> Projects</a>
+        </li>
+        <li>
+          <a href="#certifications"
+            ><i class="fas fa-certificate"></i> Certifications</a
+          >
+        </li>
+        <li>
+          <a href="#education"
+            ><i class="fas fa-graduation-cap"></i> Education</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- ABOUT SECTION -->
+      <section id="about">
+        <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
+        <div class="summary-box">
+          <p>
+            <strong>Engineering Manager</strong> with
+            <strong>17+ years</strong> of proven expertise in leading
+            high-performing technical teams, architecting scalable cloud
+            solutions, and driving digital transformation initiatives across
+            wellness and IT industries.
+          </p>
+          <p>
+            Currently at <strong>MINDBODY India</strong>, successfully managing
+            the development of enterprise systems supporting
+            <strong>thousands of active users</strong>, achieving
+            <strong>30% operational efficiency improvement</strong> and
+            <strong>18% user satisfaction boost</strong>. Expert in leveraging
+            AWS, Azure, Kubernetes, and modern development practices to build
+            production-grade solutions.
+          </p>
+          <p>
+            Passionate about mentoring engineering teams, implementing agile
+            methodologies, and fostering a culture of innovation and continuous
+            improvement. Proven track record of reducing delivery times by
+            <strong>22%</strong>, cutting infrastructure costs by
+            <strong>15%</strong>, and improving code quality through TDD and DDD
+            practices.
+          </p>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Core Competencies</h3>
+        <div class="strengths-grid">
+          <div class="strength-badge">
+            <i class="fas fa-brain"></i> Problem Solver
+          </div>
+          <div class="strength-badge">
+            <i class="fas fa-trophy"></i> Results-Oriented
+          </div>
+          <div class="strength-badge">
+            <i class="fas fa-handshake"></i> Client-Focused
+          </div>
+          <div class="strength-badge">
+            <i class="fas fa-book"></i> Continuous Learner
+          </div>
+          <div class="strength-badge">
+            <i class="fas fa-users"></i> Team Builder
+          </div>
+          <div class="strength-badge">
+            <i class="fas fa-chess"></i> Strategic Planner
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section id="experience">
+        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <div class="job-title">
+              <i class="fas fa-crown"></i> Engineering Manager – Cloud Solutions
+              & Agile Delivery
+            </div>
+            <div class="company">
+              <i class="fas fa-building"></i> MINDBODY India
+            </div>
+            <div class="duration">
+              <i class="fas fa-calendar-alt"></i> September 2023 - Present (2
+              years 4 months)
+            </div>
+            <ul>
+              <li>
+                Directed development of
+                <span class="metric-badge"
+                  ><i class="fas fa-server"></i> scalable systems</span
+                >
+                supporting thousands of users, achieving
+                <span class="metric-badge">↑ 30% operational efficiency</span>
+              </li>
+              <li>
+                Led team of
+                <span class="metric-badge">8 engineers</span> implementing
+                backend solutions using C#, .NET Core, AWS, resulting in
+                <span class="metric-badge">↑ 18% user satisfaction</span>
+              </li>
+              <li>
+                Reduced project delivery times by
+                <span class="metric-badge">↓ 22%</span> and production defects
+                by <span class="metric-badge">↓ 16%</span> through agile
+                transformation
+              </li>
+              <li>
+                Optimized cloud infrastructure reducing costs by
+                <span class="metric-badge">↓ 15%</span> while improving system
+                reliability and performance
+              </li>
+              <li>
+                Mentored team in modern development practices, boosting team
+                productivity by <span class="metric-badge">↑ 16%</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-title">
+              <i class="fas fa-layer-group"></i> Associate Manager – Cloud
+              Infrastructure & Software Development
+            </div>
+            <div class="company">
+              <i class="fas fa-building"></i> MINDBODY India
+            </div>
+            <div class="duration">
+              <i class="fas fa-calendar-alt"></i> September 2022 - September
+              2023 (1 year 1 month)
+            </div>
+            <ul>
+              <li>
+                Led team in designing and deploying
+                <span class="metric-badge">cloud-based solutions</span>
+                leveraging AWS and Kubernetes
+              </li>
+              <li>
+                Managed development of scalable backend systems using C#, .NET,
+                and cloud technologies
+              </li>
+              <li>
+                Implemented CI/CD pipelines, reducing deployment times by
+                <span class="metric-badge">↓ 25%</span>
+              </li>
+              <li>
+                Achieved
+                <span class="metric-badge">98% on-time delivery</span> rate
+                through rigorous project management
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-title">
+              <i class="fas fa-cogs"></i> Principal Software Engineer – System
+              Design & Microservices
+            </div>
+            <div class="company">
+              <i class="fas fa-building"></i> MINDBODY India
+            </div>
+            <div class="duration">
+              <i class="fas fa-calendar-alt"></i> December 2019 - September 2022
+              (2 years 10 months)
+            </div>
+            <ul>
+              <li>
+                Architected scalable systems supporting
+                <span class="metric-badge">10,000+ active users</span> with
+                <span class="metric-badge">30% efficiency gain</span>
+              </li>
+              <li>
+                Developed robust backend solutions using C#, .NET Core, AWS with
+                DDD and microservices patterns
+              </li>
+              <li>
+                Mentored engineering team in Docker, Kubernetes, PostgreSQL
+                adoption
+              </li>
+              <li>
+                Optimized infrastructure reducing costs by
+                <span class="metric-badge">15%</span> without compromising
+                performance
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-title">
+              <i class="fas fa-users"></i> Team Lead – Software Development &
+              Delivery
+            </div>
+            <div class="company">
+              <i class="fas fa-building"></i> Aloha Technology Pvt. Ltd.
+            </div>
+            <div class="duration">
+              <i class="fas fa-calendar-alt"></i> July 2009 - December 2019 (10
+              years 6 months)
+            </div>
+            <ul>
+              <li>
+                Delivered innovative solutions achieving
+                <span class="metric-badge">↓ 20% turnaround time</span>
+                reduction and
+                <span class="metric-badge">>95% client satisfaction</span>
+              </li>
+              <li>
+                Maintained
+                <span class="metric-badge">98% sprint completion</span> rate
+                managing complex multi-project portfolio
+              </li>
+              <li>
+                Coordinated QA achieving
+                <span class="metric-badge">98% defect detection</span> and
+                <span class="metric-badge">100% on-time UAT delivery</span>
+              </li>
+              <li>
+                Reduced deployment errors by
+                <span class="metric-badge">↓ 20%</span> through end-to-end
+                product delivery optimization
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-title">
+              <i class="fas fa-code"></i> Software Developer
+            </div>
+            <div class="company">
+              <i class="fas fa-building"></i> Mastermind Solution
+            </div>
+            <div class="duration">
+              <i class="fas fa-calendar-alt"></i> January 2008 - June 2009 (1
+              year 6 months)
+            </div>
+            <ul>
+              <li>
+                Designed and developed comprehensive Hospital Management System
+                using C#, .NET, SQL
+              </li>
+              <li>
+                Contributed to healthcare domain expertise and enterprise
+                application development
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills">
+        <h2><i class="fas fa-tools"></i> Technical Skills & Expertise</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h4><i class="fas fa-server"></i> Backend & Cloud Architecture</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">.NET Core</span>
+              <span class="skill-tag">ASP.NET MVC</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">Lambda</span>
+              <span class="skill-tag">API Gateway</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-paint-brush"></i> Frontend & Mobile Dev</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Apollo GraphQL</span>
+              <span class="skill-tag">Silverlight</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-database"></i> Databases & Data</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">RDS</span>
+              <span class="skill-tag">Aurora</span>
+              <span class="skill-tag">Entity Framework</span>
+              <span class="skill-tag">LINQ</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>
+              <i class="fas fa-network-wired"></i> DevOps & Infrastructure
+            </h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">CloudWatch</span>
+              <span class="skill-tag">SNS/SQS</span>
+              <span class="skill-tag">Step Functions</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-cube"></i> Architecture & Patterns</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">DDD</span>
+              <span class="skill-tag">MVVM</span>
+              <span class="skill-tag">TDD</span>
+              <span class="skill-tag">SOLID</span>
+              <span class="skill-tag">Design Patterns</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-people-arrows"></i> Leadership & Agile</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Team Leadership</span>
+              <span class="skill-tag">Agile/Scrum</span>
+              <span class="skill-tag">Mentoring</span>
+              <span class="skill-tag">Strategic Planning</span>
+              <span class="skill-tag">Stakeholder Mgmt</span>
+              <span class="skill-tag">Client Relations</span>
+            </div>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-language"></i> Programming Languages</h3>
+        <div class="languages-grid">
+          <div class="language-item">
+            <i class="fab fa-golang"></i>
+            <strong>Go</strong>
+            <div class="proficiency">Proficient</div>
+          </div>
+          <div class="language-item">
+            <i class="fas fa-comments"></i>
+            <strong>English</strong>
+            <div class="proficiency">Proficient</div>
+          </div>
+          <div class="language-item">
+            <i class="fas fa-comments"></i>
+            <strong>Hindi</strong>
+            <div class="proficiency">Native Speaker</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects">
+        <h2><i class="fas fa-rocket"></i> Major Projects & Achievements</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h4><i class="fas fa-chart-pie"></i> Lead Management System</h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Enterprise cloud-based lead management platform for wellness
+                industry supporting 10,000+ active users with improved
+                engagement metrics and enhanced scalability.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">.NET Core</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <p>
+                <strong style="color: var(--accent)"
+                  ><i class="fas fa-arrow-up"></i> 25% user engagement
+                  improvement</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h4>
+                <i class="fas fa-hospital"></i> Hospital Management System
+              </h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Comprehensive healthcare domain solution handling patient
+                management, operations workflow, and medical records management
+                with enterprise-grade reliability.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">.NET</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">WinForms</span>
+              </div>
+              <p>
+                <strong style="color: var(--accent)"
+                  ><i class="fas fa-check"></i> Enterprise deployment</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h4><i class="fas fa-phone"></i> Telecom Operations Platform</h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Back-office solution for telecom operations processing 3,000+
+                files monthly with advanced billing and error reduction
+                capabilities.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Salesforce</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Python</span>
+              </div>
+              <p>
+                <strong style="color: var(--accent)"
+                  ><i class="fas fa-arrow-down"></i> 80% billing error
+                  reduction</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h4>
+                <i class="fas fa-graduation-cap"></i> Professional Education
+                Platform
+              </h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Online learning platform enabling professional education
+                transition assisting 50+ organizations and reaching 10,000+
+                learners globally.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">AWS</span>
+              </div>
+              <p>
+                <strong style="color: var(--accent)"
+                  ><i class="fas fa-users"></i> 10,000+ learners reached</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h4><i class="fas fa-brain"></i> Vista Hackathon 2020 Winner</h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Won best engineering team award across Vista portfolio companies
+                globally. Built AI/ML engine for intelligent data processing and
+                pattern recognition.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">ML.NET</span>
+                <span class="tech-tag">AI/ML</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+              </div>
+              <p>
+                <strong style="color: var(--accent)"
+                  ><i class="fas fa-trophy"></i> Global competition
+                  winner</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h4>
+                <i class="fas fa-cloud"></i> Cloud Infrastructure Optimization
+              </h4>
+            </div>
+            <div class="project-body">
+              <p>
+                Designed and implemented enterprise-grade AWS and Azure
+                infrastructure with Kubernetes orchestration, achieving cost
+                optimization and reliability improvements.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Azure</span>
+              </div>
+              <p>
+                <strong style="color: var(--accent)"
+                  ><i class="fas fa-arrow-down"></i> 15% cost reduction,
+                  improved reliability</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <section id="certifications">
+        <h2>
+          <i class="fas fa-certificate"></i> Certifications & Continuous
+          Learning
+        </h2>
+        <div class="certification-grid">
+          <div class="cert-item">
+            <strong
+              ><i class="fas fa-microchip"></i> What Is Generative AI?</strong
+            >
+            <p>
+              Latest training in generative AI technologies, LLMs, and modern AI
+              applications in enterprise solutions.
+            </p>
+          </div>
+          <div class="cert-item">
+            <strong
+              ><i class="fas fa-project-diagram"></i> Graph Developer -
+              Associate</strong
+            >
+            <p>
+              Certified expertise in graph database development, design
+              patterns, and advanced data modeling techniques.
+            </p>
+          </div>
+          <div class="cert-item">
+            <strong
+              ><i class="fab fa-aws"></i> AWS Fundamentals - Going Cloud
+              Native</strong
+            >
+            <p>
+              Cloud-native architecture principles, AWS best practices, and
+              scalable infrastructure design.
+            </p>
+          </div>
+          <div class="cert-item">
+            <strong
+              ><i class="fab fa-microsoft"></i> Microsoft 365 - Advanced
+              Excel</strong
+            >
+            <p>
+              Advanced proficiency in Excel, data analysis, pivot tables, and
+              business intelligence tools.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION SECTION -->
+      <section id="education">
+        <h2>
+          <i class="fas fa-graduation-cap"></i> Education & Qualifications
+        </h2>
+        <div class="education-grid">
+          <div class="education-item">
+            <div class="degree">
+              <i class="fas fa-diploma"></i> Bachelor of Technology (BTech)
+            </div>
+            <div class="institution">
+              Mahatma Gandhi Chitrakoot Gramodaya Vishwavidyalaya
+            </div>
+            <div>Information Technology</div>
+            <div class="year">
+              <i class="fas fa-calendar"></i> 2003 - 2007 | Satna, Madhya
+              Pradesh
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="degree">
+              <i class="fas fa-tools"></i> Industrial Training Institute (ITI)
+            </div>
+            <div class="institution">ITI Chhindwara</div>
+            <div>Electrician Trade Certification</div>
+            <div class="year">
+              <i class="fas fa-check-circle"></i> Completed | Madhya Pradesh
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="degree">
+              <i class="fas fa-book"></i> High Secondary Education
+            </div>
+            <div class="institution">MP Board Bhopal</div>
+            <div>Physics - Grade: Distinction</div>
+            <div class="year"><i class="fas fa-star"></i> Distinction</div>
+          </div>
+
+          <div class="education-item">
+            <div class="degree">
+              <i class="fas fa-book"></i> High School Education
+            </div>
+            <div class="institution">MP Board Bhopal</div>
+            <div>Mathematics - Grade: Distinction</div>
+            <div class="year"><i class="fas fa-star"></i> Distinction</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/anil-indorkar/" target="_blank"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a href="https://github.com/anilindorkar" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="mailto:ajindorkar@gmail.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="tel:+919173851679"><i class="fas fa-phone"></i> Contact</a>
+      </div>
+      <p>
+        &copy; 2025 Anil Indorkar | Engineering Manager & Technical Leader |
+        Based in Pune, India
+      </p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem">
+        Available for leadership opportunities in cloud architecture,
+        engineering management, and technical mentoring
+      </p>
+    </footer>
+  </body>
+</html>
