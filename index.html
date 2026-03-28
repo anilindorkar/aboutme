@@ -747,6 +747,180 @@
           font-size: 1.6rem;
         }
       }
+
+      /* ============ KITE LOGIN ============ */
+      .kite-login-btn {
+        background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+        color: white;
+        border: none;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: opacity 0.3s, transform 0.2s;
+        text-decoration: none;
+      }
+
+      .kite-login-btn:hover {
+        opacity: 0.9;
+        transform: scale(1.04);
+      }
+
+      .kite-connected-badge {
+        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        color: white;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: none;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .kite-modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .kite-modal-overlay.active {
+        display: flex;
+      }
+
+      .kite-modal {
+        background: white;
+        border-radius: 14px;
+        padding: 2.5rem;
+        max-width: 420px;
+        width: 90%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        position: relative;
+        animation: modalSlideIn 0.25s ease;
+      }
+
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .kite-modal h3 {
+        color: var(--primary);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .kite-modal p.kite-modal-desc {
+        color: var(--text-light);
+        font-size: 0.92rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+
+      .kite-modal label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: var(--text-dark);
+        font-size: 0.95rem;
+      }
+
+      .kite-modal input[type="text"] {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+        outline: none;
+      }
+
+      .kite-modal input[type="text"]:focus {
+        border-color: #ff5722;
+      }
+
+      .kite-modal-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .kite-modal-submit {
+        flex: 1;
+        background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+        color: white;
+        border: none;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+
+      .kite-modal-submit:hover {
+        opacity: 0.9;
+      }
+
+      .kite-modal-cancel {
+        flex: 1;
+        background: var(--light-bg);
+        color: var(--text-dark);
+        border: 2px solid var(--border);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .kite-modal-cancel:hover {
+        background: #e9ecef;
+      }
+
+      .kite-modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: var(--text-light);
+        line-height: 1;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        transition: color 0.2s;
+      }
+
+      .kite-modal-close:hover {
+        color: var(--text-dark);
+      }
+
+      .kite-error-msg {
+        color: #dc2626;
+        font-size: 0.88rem;
+        margin-top: 0.4rem;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -803,8 +977,48 @@
             ><i class="fas fa-graduation-cap"></i> Education</a
           >
         </li>
+        <li>
+          <button
+            id="kiteLoginBtn"
+            class="kite-login-btn"
+            onclick="openKiteModal()"
+            title="Login with Kite (Zerodha)"
+          >
+            <i class="fas fa-chart-bar"></i> Login with Kite
+          </button>
+          <span id="kiteConnectedBadge" class="kite-connected-badge">
+            <i class="fas fa-check-circle"></i> Kite Connected
+          </span>
+        </li>
       </ul>
     </nav>
+
+    <!-- KITE LOGIN MODAL -->
+    <div id="kiteModalOverlay" class="kite-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="kiteModalTitle">
+      <div class="kite-modal">
+        <button class="kite-modal-close" onclick="closeKiteModal()" aria-label="Close">&times;</button>
+        <h3 id="kiteModalTitle"><i class="fas fa-chart-bar"></i> Connect Kite Account</h3>
+        <p class="kite-modal-desc">
+          Enter your Kite Connect API key to log in to your Zerodha Kite account.
+          You will be redirected to Kite's secure login page.
+        </p>
+        <label for="kiteApiKey">API Key</label>
+        <input
+          type="text"
+          id="kiteApiKey"
+          placeholder="Enter your Kite Connect API key"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <p id="kiteApiKeyError" class="kite-error-msg">Please enter a valid API key (6–32 alphanumeric characters).</p>
+        <div class="kite-modal-actions">
+          <button class="kite-modal-submit" onclick="redirectToKiteLogin()" type="button">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+          <button class="kite-modal-cancel" onclick="closeKiteModal()" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
       <!-- ABOUT SECTION -->
@@ -1420,5 +1634,89 @@
         engineering management, and technical mentoring
       </p>
     </footer>
+
+    <script>
+      // ============ KITE CONNECT LOGIN ============
+      const KITE_LOGIN_BASE = "https://kite.trade/connect/login";
+      const KITE_API_KEY_STORAGE = "kite_api_key";
+      const KITE_REQUEST_TOKEN_STORAGE = "kite_request_token";
+
+      function openKiteModal() {
+        const overlay = document.getElementById("kiteModalOverlay");
+        overlay.classList.add("active");
+        const savedKey = sessionStorage.getItem(KITE_API_KEY_STORAGE) || "";
+        document.getElementById("kiteApiKey").value = savedKey;
+        document.getElementById("kiteApiKeyError").style.display = "none";
+        document.getElementById("kiteApiKey").focus();
+      }
+
+      function closeKiteModal() {
+        document.getElementById("kiteModalOverlay").classList.remove("active");
+      }
+
+      function redirectToKiteLogin() {
+        const apiKey = document.getElementById("kiteApiKey").value.trim();
+        const errorEl = document.getElementById("kiteApiKeyError");
+        if (!apiKey || !/^[a-zA-Z0-9]{6,32}$/.test(apiKey)) {
+          errorEl.style.display = "block";
+          return;
+        }
+        errorEl.style.display = "none";
+        sessionStorage.setItem(KITE_API_KEY_STORAGE, apiKey);
+        const loginUrl = `${KITE_LOGIN_BASE}?v=3&api_key=${encodeURIComponent(apiKey)}`;
+        window.location.href = loginUrl;
+      }
+
+      function showKiteConnected() {
+        document.getElementById("kiteLoginBtn").style.display = "none";
+        const badge = document.getElementById("kiteConnectedBadge");
+        badge.style.display = "flex";
+      }
+
+      function checkKiteCallback() {
+        const params = new URLSearchParams(window.location.search);
+        const requestToken = params.get("request_token");
+        const status = params.get("status");
+        if (requestToken && status === "success") {
+          sessionStorage.setItem(KITE_REQUEST_TOKEN_STORAGE, requestToken);
+          // Remove only Kite OAuth params, preserve any others
+          params.delete("request_token");
+          params.delete("status");
+          const remaining = params.toString();
+          const cleanUrl =
+            window.location.pathname +
+            (remaining ? "?" + remaining : "") +
+            window.location.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+          // Clear stored API key after successful authentication
+          sessionStorage.removeItem(KITE_API_KEY_STORAGE);
+          showKiteConnected();
+        } else if (sessionStorage.getItem(KITE_REQUEST_TOKEN_STORAGE)) {
+          showKiteConnected();
+        }
+      }
+
+      // Close modal on overlay click
+      document
+        .getElementById("kiteModalOverlay")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeKiteModal();
+        });
+
+      // Close modal on Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeKiteModal();
+      });
+
+      // Trigger Enter key in API key field
+      document
+        .getElementById("kiteApiKey")
+        .addEventListener("keydown", function (e) {
+          if (e.key === "Enter") redirectToKiteLogin();
+        });
+
+      // Check for Kite OAuth callback on page load
+      checkKiteCallback();
+    </script>
   </body>
 </html>
